@@ -1,0 +1,21 @@
+.menu
+    &__link
+        display block
+        color #888
+        font-size small-size
+        transition color .3s
+        &_sidebar
+            padding 0.5rem 1rem
+        &_footer
+            padding 0.25rem 0
+        &_active
+            color white
+        &::before
+            content '\f219'
+            font-family FontAwesome
+            margin-right .5rem
+        &:hover
+            color accent-color
+            &::before
+                color accent-color
+

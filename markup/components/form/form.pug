@@ -1,0 +1,28 @@
+include ../../components/modal/modal.pug
+include ../../components/title/title.pug
+include ../../components/select/select.pug
+include ../../components/button/button.pug
+include ../../components/input/input.pug
+
+mixin form(data)
+    //form
+    form.form&attributes(attributes)
+        +modal('Спасибо').modal_theme_success
+        <!-- Hidden Required Fields -->
+        // Hidden Required Fields
+        input(type="hidden" name="project_name" value="S&Mitler")
+        input(type="hidden" name="admin_email" value="isometra2013@gmail.com")
+        input(type="hidden" name="form_subject" value="response for S&Mitler")
+        input(type="hidden" name="Страница" value="")
+        // End Hidden Required Fields
+
+        img.form__logo(src="%=static=%img/content/logo-2.svg" alt="S&Mitler")
+        +title('Оставить заявку').form__title
+        p.form__subtitle Оставьте заявку и мы перезвоним вам в течение 15 минут.
+        fieldset.form__fieldset
+            +input('text','Name','Ваше имя...','^[a-zA-Zа-яА-ЯёЁ]+$','Вы неверно ввели имя, повторите ввод в формате Иван').form__input
+            +input('tel','Telephone','Ваш телефон...','^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$','Вы неверно ввели номер мобильного телефона, повторите ввод в формате (050)XXX-XX-XX').form__input
+            +input('email','Email','Ваша почта...','^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$','Вы неверно ввели адрес почты, повторите ввод в формате super@mail.com').form__input
+            +select(select.formList).form__select#select
+        button.button.button_theme_default.button_size_default.form__button Отправить
+    //end form

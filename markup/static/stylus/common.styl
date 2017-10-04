@@ -1,0 +1,46 @@
+// Common styles of the project
+*{
+    box-sizing border-box
+}
+*::after,
+*::before{
+    box-sizing border-box
+}
+
+html, body
+    font-family MainFont
+    font-size 16px
+    line-height 1.75
+    height 100%
+
+.page
+    position relative
+    transition transform .5s
+    overflow-x hidden
+
+.page_is_open
+    transform translateX(-15.625rem)
+    overflow-y hidden
+.page__sidebar
+    position fixed
+    top 0
+    right 0
+    transform translateX(15.625rem)
+.page__header
+    position relative
+    background-image url("%=static=%content/top-bg.jpg")
+    min-height 43.75rem
+    height 100vh
+    background-size cover
+    background-position center
+
+.page__callback
+    background-color white
+    background-image url("%=static=%content/lady.jpg")
+    height 100vh
+    background-size contain
+    background-position 25%
+    background-repeat no-repeat
+
+.page__footer
+    background-color dark-color

@@ -1,0 +1,9 @@
+include ../../components/title/title.pug
+
+mixin article(titleFirst, titleSecond, text)
+    //article
+    article.article&attributes(attributes)
+        +title(titleFirst, titleSecond).article__title
+        p.article__text= text
+        p.article__text= text
+    //end article

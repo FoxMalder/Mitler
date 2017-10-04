@@ -1,0 +1,15 @@
+include ../../components/telephone/telephone.pug
+
+mixin contacts(data)
+    //contacts
+    .contacts&attributes(attributes)
+        address.col-md-4.col-sm-12
+            i.fa.fa-location-arrow
+            | г. Москва, ул. Ивана Бабушкина, 22с1
+        .col-md-4.col-sm-12
+            .contacts__telephone
+                +telephone.telephone_size_default
+        .col-md-4.col-sm-12
+            i.fa.fa-clock-o
+            | Время работы: ежедневно: 10:00 - 22:00
+    //end contacts

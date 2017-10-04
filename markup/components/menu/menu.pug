@@ -1,0 +1,11 @@
+//include ../../components/link/link.pug
+
+mixin menu(data)
+    //menu
+    nav.menu&attributes(attributes)
+        - var itemClasses = ['menu__link']
+        if data.mod === 'sidebar' || data.mod === 'footer'
+           - itemClasses.push(itemClasses[0] + '_' + data.mod)
+        each item in data.list
+            a.link(class=item.active?'menu__link_active':'' href=item.url class=itemClasses )= item.title
+    //end menu

@@ -1,0 +1,19 @@
+.modal
+    display none
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    text-transform uppercase
+    font-weight bold
+    z-index 10
+    &_theme_success
+        background-color accent-color  
+    &__text
+        margin auto
+    & ~ *
+        transition all .5s
+    &_state_active
+        opacity .5
+        filter blur(.5rem)

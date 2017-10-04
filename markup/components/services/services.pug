@@ -1,0 +1,22 @@
+include ../../components/service-item/service-item.pug
+
+mixin services(data)
+    //services
+    .services&attributes(attributes)
+        #services-carousel.owl-carousel
+            +service-item('Косметологический','сервис','service','Косметологический сервис').services__service-item
+                +service-list.service-item__service-list
+                +button('Список услуг').button_theme_default.button_size_default.service-item__button
+            +service-item('Парикмахерский','сервис','service2','Парикмахерский сервис').services__service-item
+                +service-list.service-item__service-list
+                +button('Список услуг').button_theme_default.button_size_default.service-item__button
+            +service-item('Маникюрный','сервис','service3','Маникюрный сервис').services__service-item
+                +service-list.service-item__service-list
+                +button('Список услуг').button_theme_default.button_size_default.service-item__button
+            +service-item('Массаж и SPA','сервис','service2','Парикмахерский сервис').services__service-item
+                +service-list.service-item__service-list
+                +button('Список услуг').button_theme_default.button_size_default.service-item__button
+            +service-item('Солярий','сервис','service3','Маникюрный сервис').services__service-item
+                +service-list.service-item__service-list
+                +button('Список услуг').button_theme_default.button_size_default.service-item__button
+    //end services

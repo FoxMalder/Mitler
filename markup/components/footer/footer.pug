@@ -1,0 +1,35 @@
+//-include ../../components/telephone/telephone.pug
+include ../../components/socials/socials.pug
+include ../../components/menu/menu.pug
+include ../../components/map/map.pug
+
+
+
+mixin footer(data)
+    //footer
+    footer.footer&attributes(attributes)
+        .container
+            .row
+                .col-lg-4.col-md-4.col-sm-6.col-xs-12
+                    .footer__column
+                        img(src="%=static=%/img/content/logo-1.svg" alt="S&Mitler").footer__logo
+                        p.footer__logo-descr Салон красоты бизнес-класса в Москве
+                        +socials(socials.footer.mod)
+                .col-lg-4.col-md-4.col-sm-6.col-xs-6
+                    .footer__column
+                        +menu(menu.footer)
+                .col-lg-4.col-md-4.col-sm-6.col-xs-6
+                    .footer__column
+                        address.footer__address
+                            i.fa.fa-location-arrow 
+                            | г.Москва, ул. Ивана Бабушкина, 22с1, м.Профсоюзная
+                        p.footer__address
+                            i.fa.fa-clock-o
+                            | Время работы: ежедневно с 10:00-12:00 
+                        p.footer__telephone
+                            i.fa.fa-mobile 
+                            | + 7 (495) 922-77-72
+                .col-lg-12.col-md-12.col-sm-6.col-xs-12
+                    .footer__column
+                        +map
+    //end footer

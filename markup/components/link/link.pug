@@ -1,0 +1,5 @@
+mixin link(href, name)
+    //-a.link(class=attributes.class href= href)= name
+    a.link(href= href)&attributes(attributes)
+        if block
+            block

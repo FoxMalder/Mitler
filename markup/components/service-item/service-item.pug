@@ -1,0 +1,16 @@
+include ../../components/service-list/service-list.pug
+include ../../components/logo/logo.pug
+
+mixin service-item(title, subtitle, img, alt)
+    //service-item
+    section.service-item&attributes(attributes)
+        .service-item__content
+            header.service-item__header
+                +logo('logo-2.svg').service-item__logo
+                h3.service-item__title= title
+                    -subtitle = typeof subtitle != "undefined" ? subtitle : 'сервис'
+                        span.service-item__subtitle= subtitle
+            if block
+                block
+        img(src="%=static=%img/content/"+img+".png" alt= alt).service-item__img
+    //end service-item

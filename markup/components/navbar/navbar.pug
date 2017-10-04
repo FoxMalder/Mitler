@@ -1,0 +1,14 @@
+include ../../components/logo/logo.pug
+include ../../components/link/link.pug
+include ../../components/telephone/telephone.pug
+include ../../components/hamburger/hamburger.pug
+
+mixin navbar(data)
+    //navbar
+    .navbar&attributes(attributes)
+        +link('index.html').navbar__link
+            +logo('logo-1.svg').navbar__logo
+        +telephone.navbar__telephone.telephone_size_middle
+        +hamburger.navbar__hamburger.hamburger_collapse#hamburger
+        
+    //end navbar

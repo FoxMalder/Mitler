@@ -1,0 +1,55 @@
+.chosen-container
+    font-size 1rem
+    margin-top 1rem
+    .chosen-single
+        padding 0 1.375rem
+        height 42px
+        line-height 42px
+        background none
+        box-shadow none
+        background-color transparent
+        border 1px solid rgba(black,.1)
+        border-bottom-width 2px
+.chosen-single:focus
+    outline 1px dashed black
+.chosen-container-single .chosen-single
+    border-radius 0
+.chosen-container-single .chosen-single div
+    width 16px
+    right 1.375rem
+    transform rotate(0deg)
+    transition transform .3s
+.chosen-container-single .chosen-single div b
+    background: url('%=static=%assets/select/arrow-select.png') no-repeat 100% 50%
+.chosen-container-active.chosen-with-drop .chosen-single div
+    transform rotate(180deg)
+    transition transform .3s
+.chosen-container-active.chosen-with-drop .chosen-single div b
+    background-position 100% 50%
+.chosen-container-active.chosen-with-drop .chosen-single
+    background none
+    box-shadow none
+    background-color transparent
+    border 1px solid rgba(black,.1)
+    border-bottom-width 2px
+    color rgba(0,0,0,0.8)
+.chosen-container-single .chosen-drop
+    border-radius 0
+.chosen-container .chosen-drop
+    box-shadow none
+    border 1px solid rgba(black,.1)
+.chosen-container .chosen-results
+    padding 0
+    margin 0
+.chosen-search,
+.chosen-search-input
+    display none
+.chosen-container .chosen-results li 
+    padding 0 1.375rem
+    line-height 42px
+    height 42px
+.chosen-container .chosen-results li.disabled-result
+    display none 
+.chosen-container .chosen-results li.highlighted
+    background-color accent-color
+    background-image none
