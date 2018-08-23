@@ -1,7 +1,7 @@
 (function () {
     function equalHeightCarousel() {
         $('.service-item').each(function () {
-            var self = $(this),
+            let self = $(this),
                 contentHeight = self.find('.service-item__content').outerHeight();
             self.find('.service-item__img').css('height', contentHeight);
         });
