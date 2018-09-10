@@ -306,8 +306,8 @@
                             <p class="form__subtitle">Оставьте заявку и мы перезвоним вам в течение 15 минут.</p>
                             <fieldset class="form__fieldset">
                                 <input class="input form__input" type="text" name="Name" placeholder="Ваше имя..." pattern="^[a-zA-Zа-яА-ЯёЁ]+$" title="Вы неверно ввели имя, повторите ввод в формате Иван" required>
-                                <input class="input form__input" type="tel" name="Telephone" placeholder="Ваш телефон..." pattern="^+?[78][-(]?d{3})?-?d{3}-?d{2}-?d{2}$" title="Вы неверно ввели номер мобильного телефона, повторите ввод в формате (050)XXX-XX-XX" required>
-                                <input class="input form__input" type="email" name="Email" placeholder="Ваша почта..." pattern="^((8|+7)[- ]?)?((?d{3})?[- ]?)?[d- ]{7,10}$" title="Вы неверно ввели адрес почты, повторите ввод в формате super@mail.com" required>
+                                <input class="input form__input" type="tel" name="Telephone" placeholder="Ваш телефон..." pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Вы неверно ввели номер мобильного телефона, повторите ввод в формате (050)XXX-XX-XX" required>
+                                <input class="input form__input" type="email" name="Email" placeholder="Ваша почта..." pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" title="Вы неверно ввели адрес почты, повторите ввод в формате super@mail.com" required>
                                 <!--select-->
                                 <select class="select form__select" id="select">
                                     <option disabled selected hidden>Выберите услугу</option>
